@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.General.ProjectPrompt">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.General.ProjectPrompt" />
+              <option name="content" value="import static the field&#10;    " />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="707d5611-70ea-42f8-a852-10251ba3c966" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2w69rlqpB0CF5OJ2pqSJMvUeoZE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AuthorizationserverApplication.executor": "Run",
+    "Spring Boot.gateway.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/sami riahi/GitHub/Projets/SelfProject/SpringBootMicroServicesAngularProfessional/gateway",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.1150748",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
+    "spring.configuration.checksum": "1135b7cc311bb8b5c76eb1f610eb7a5a",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.selfproject.authorizationserver.security" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\sami riahi\GitHub\Projets\SelfProject\SpringBootMicroServicesAngularProfessional\discoveryserver\src\main\java\io\selfproject\discoveryservice" />
+      <recent name="C:\Users\pc\OneDrive\Bureau\SelfProject\Ticket_APP\authorizationserver\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="io.selfproject.authorizationserver.security" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.selfproject.gateway.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="707d5611-70ea-42f8-a852-10251ba3c966" name="Changes" comment="" />
+      <created>1745351359407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745351359407</updated>
+      <workItem from="1745351360703" duration="663000" />
+      <workItem from="1745352295045" duration="7077000" />
+      <workItem from="1745430081146" duration="5843000" />
+      <workItem from="1745436612001" duration="1370000" />
+      <workItem from="1745438250932" duration="62000" />
+      <workItem from="1745438334908" duration="468000" />
+      <workItem from="1745439298366" duration="2301000" />
+      <workItem from="1745441631786" duration="224000" />
+      <workItem from="1745441873414" duration="6345000" />
+      <workItem from="1745531267576" duration="6018000" />
+      <workItem from="1745579928065" duration="389000" />
+      <workItem from="1745580368603" duration="341000" />
+      <workItem from="1745581722101" duration="1211000" />
+      <workItem from="1745582978227" duration="937000" />
+      <workItem from="1745783741263" duration="12034000" />
+      <workItem from="1746133574138" duration="6036000" />
+      <workItem from="1746528693442" duration="660000" />
+      <workItem from="1746540267923" duration="32770000" />
+      <workItem from="1747052094692" duration="19411000" />
+      <workItem from="1747154837616" duration="10155000" />
+      <workItem from="1747221487469" duration="2593000" />
+      <workItem from="1747227220650" duration="70000" />
+      <workItem from="1747227547537" duration="286000" />
+      <workItem from="1747230357727" duration="419000" />
+      <workItem from="1747231077796" duration="258000" />
+      <workItem from="1747231362051" duration="8643000" />
+      <workItem from="1747240748724" duration="1714000" />
+      <workItem from="1747242496092" duration="182000" />
+      <workItem from="1747243176470" duration="648000" />
+      <workItem from="1747243961912" duration="2931000" />
+      <workItem from="1747248218239" duration="893000" />
+      <workItem from="1747249176342" duration="6680000" />
+      <workItem from="1747256147315" duration="1652000" />
+      <workItem from="1747481081605" duration="84000" />
+      <workItem from="1747481231907" duration="1228000" />
+      <workItem from="1747484463766" duration="273000" />
+      <workItem from="1747607854711" duration="2961000" />
+      <workItem from="1747666404472" duration="3232000" />
+      <workItem from="1747746605345" duration="636000" />
+      <workItem from="1747752769889" duration="812000" />
+      <workItem from="1750107309815" duration="886000" />
+      <workItem from="1750110251100" duration="4469000" />
+      <workItem from="1750787121309" duration="131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
