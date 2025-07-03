@@ -1,0 +1,43 @@
+package io.selfproject.notificationservice.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+/**
+ * @author Junior RT
+ * @version 1.0
+ * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
+ * @email getarrayz@gmail.com
+ * @since 2/1/25
+ */
+
+@Getter
+@Setter
+@ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Message {
+    private Long messageId;
+    private String messageUuid;
+    private String conversationId;
+    private String subject;
+    private String message;
+    private String status;
+    private String senderUuid;
+    private String senderFirstName;
+    private String senderLastName;
+    private String senderEmail;
+    private String senderImageUrl;
+    private String receiverUuid;
+    private String receiverFirstName;
+    private String receiverLastName;
+    private String receiverEmail;
+    private String receiverImageUrl;
+    private String createdAt;
+    private String updatedAt;
+}
