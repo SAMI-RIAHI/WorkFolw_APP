@@ -1,12 +1,5 @@
 package io.selfproject.notificationservice.query;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 1/22/25
- */
 
 public class MessageQuery {
     public static final String CREATE_MESSAGE_FUNCTION =

@@ -18,13 +18,6 @@ import java.util.Map;
 
 import static io.selfproject.notificationservice.utils.NotificationUtils.*;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 1/22/25
- */
 
 @Slf4j
 @Service
@@ -33,15 +26,16 @@ public class EmailServiceImpl implements EmailService {
     // Watch this video to know how to send emails using Spring Boot: https://youtu.be/onCzCxDyR24?si=pjtZeysRH4I723Zr
     public static final String NEW_USER_ACCOUNT_VERIFICATION = "New Account Verification";
     public static final String UTF_8_ENCODING = "UTF-8";
+    public static final String NEW_TICKET_REQUEST = "New Support Ticket";
+    public static final String PASSWORD_RESET_REQUEST = "Password Reset Request";
     public static final String ACCOUNT_VERIFICATION_TEMPLATE = "newaccount";
     public static final String PASSWORD_RESET_TEMPLATE = "resetpassword";
     public static final String NEW_TICKET_TEMPLATE = "newticket";
     public static final String NEW_COMMENT_TEMPLATE = "newcomment";
     public static final String NEW_FILE_TEMPLATE = "newfile";
-    public static final String NEW_TICKET_REQUEST = "New Support Ticket";
-    public static final String PASSWORD_RESET_REQUEST = "Password Reset Request";
     private final JavaMailSender emailSender;
     private final TemplateEngine templateEngine;
+
     @Value("${spring.mail.verify.host}")
     private String host;
     @Value("${spring.mail.username}")
@@ -50,109 +44,85 @@ public class EmailServiceImpl implements EmailService {
     @Override
     @Async
     public void sendNewAccountHtmlEmail(String name, String to, String token) {
-        try {
-            var context = new Context();
-            context.setVariables(Map.of("name", name, "url", getVerificationUrl(host, token)));
-            var text = templateEngine.process(ACCOUNT_VERIFICATION_TEMPLATE, context);
-            MimeMessage message = getMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
-            helper.setPriority(1);
-            helper.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
-            helper.setFrom(fromEmail);
-            helper.setTo(to);
-            helper.setText(text, true);
-            emailSender.send(message);
-        } catch (Exception exception) {
-            log.error(exception.getMessage(), exception);
-            throw new ApiException("Unable to send email");
-        }
+        Map<String, Object> variables = Map.of("name", name,"url", getVerificationUrl(host, token));
+        sendEmail(to, NEW_USER_ACCOUNT_VERIFICATION, ACCOUNT_VERIFICATION_TEMPLATE, variables);
     }
 
     @Override
     @Async
     public void sendPasswordResetHtmlEmail(String name, String to, String token) {
-        try {
-            var context = new Context();
-            context.setVariables(Map.of("name", name, "url", getResetPasswordUrl(host, token)));
-            var text = templateEngine.process(PASSWORD_RESET_TEMPLATE, context);
-            MimeMessage message = getMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
-            helper.setPriority(1);
-            helper.setSubject(PASSWORD_RESET_REQUEST);
-            helper.setFrom(fromEmail);
-            helper.setTo(to);
-            helper.setText(text, true);
-            emailSender.send(message);
-        } catch (Exception exception) {
-            log.error(exception.getMessage(), exception);
-            throw new ApiException("Unable to send email");
-        }
+        Map<String, Object> variables = Map.of("name", name,"url", getResetPasswordUrl(host, token));
+        sendEmail(to, PASSWORD_RESET_REQUEST, PASSWORD_RESET_TEMPLATE, variables);
     }
 
     @Override
     @Async
     public void sendNewTicketHtmlEmail(String name, String email, String ticketTitle, String ticketNumber, String priority) {
-        try {
-            var context = new Context();
-            context.setVariables(Map.of("name", name, "priority", priority, "ticketTitle", ticketTitle, "ticketNumber", "Ticket #" + ticketNumber.toUpperCase().split("-")[4], "date", new Date(), "url", getTicketUrl(host, ticketNumber)));
-            var text = templateEngine.process(NEW_TICKET_TEMPLATE, context);
-            MimeMessage message = getMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
-            helper.setPriority(1);
-            helper.setSubject(NEW_TICKET_REQUEST);
-            helper.setFrom(fromEmail);
-            helper.setTo(email);
-            helper.setText(text, true);
-            emailSender.send(message);
-        } catch (Exception exception) {
-            log.error(exception.getMessage(), exception);
-            throw new ApiException("Unable to send email");
-        }
+        String ticketNum = "Ticket #" + ticketNumber.toUpperCase().split("-")[4];
+        Map<String, Object> variables = Map.of(
+                "name", name,
+                "priority", priority,
+                "ticketTitle", ticketTitle,
+                "ticketNumber", ticketNum,
+                "date", new Date(),
+                "url", getTicketUrl(host, ticketNumber)
+        );
+        sendEmail(email, NEW_TICKET_REQUEST, NEW_TICKET_TEMPLATE, variables);
     }
 
     @Override
     @Async
     public void sendNewFilesHtmlEmail(String name, String email, String files, String ticketTitle, String ticketNumber, String priority, String date) {
-        try {
-            var ticketNum = "Ticket #" + ticketNumber.toUpperCase().split("-")[4];
-            var context = new Context();
-            context.setVariables(Map.of("name", name, "priority", priority, "files", files.split(","), "ticketTitle", ticketTitle, "ticketNumber", ticketNum, "date", date, "url", getTicketUrl(host, ticketNumber)));
-            var text = templateEngine.process(NEW_FILE_TEMPLATE, context);
-            MimeMessage message = getMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
-            helper.setPriority(1);
-            helper.setSubject("New File Uploaded on " + ticketNum);
-            helper.setFrom(fromEmail);
-            helper.setTo(email);
-            helper.setText(text, true);
-            emailSender.send(message);
-        } catch (Exception exception) {
-            log.error(exception.getMessage(), exception);
-            throw new ApiException("Unable to send email");
-        }
+        String ticketNum = "Ticket #" + ticketNumber.toUpperCase().split("-")[4];
+        Map<String, Object> variables = Map.of(
+                "name", name,
+                "priority", priority,
+                "files", files.split(","),
+                "ticketTitle", ticketTitle,
+                "ticketNumber", ticketNum,
+                "date", date,
+                "url", getTicketUrl(host, ticketNumber)
+        );
+        sendEmail(email, "New File Uploaded on " + ticketNum, NEW_FILE_TEMPLATE, variables);
     }
 
     @Override
     @Async
     public void sendNewCommentHtmlEmail(String name, String email, String comment, String ticketTitle, String ticketNumber, String priority, String date) {
+        String ticketNum = "Ticket #" + ticketNumber.toUpperCase().split("-")[4];
+        Map<String, Object> variables = Map.of(
+                "name", name,
+                "priority", priority,
+                "comment", comment,
+                "ticketTitle", ticketTitle,
+                "ticketNumber", ticketNum,
+                "date", date,
+                "url", getTicketUrl(host, ticketNumber)
+        );
+        sendEmail(email, "New Comment on " + ticketNum, NEW_COMMENT_TEMPLATE, variables);
+    }
+
+    private void sendEmail(String to, String subject, String templateName, Map<String, Object> variables) {
         try {
-            var ticketNum = "Ticket #" + ticketNumber.toUpperCase().split("-")[4];
-            var context = new Context();
-            context.setVariables(Map.of("name", name, "priority", priority, "comment", comment, "ticketTitle", ticketTitle, "ticketNumber", ticketNum, "date", date, "url", getTicketUrl(host, ticketNumber)));
-            var text = templateEngine.process(NEW_COMMENT_TEMPLATE, context);
+            Context context = new Context();
+            context.setVariables(variables);
+            String htmlContent = templateEngine.process(templateName, context);
+
             MimeMessage message = getMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
             helper.setPriority(1);
-            helper.setSubject("New Comment on " + ticketNum);
+            helper.setSubject(subject);
             helper.setFrom(fromEmail);
-            helper.setTo(email);
-            helper.setText(text, true);
+            helper.setTo(to);
+            helper.setText(htmlContent, true);
+
             emailSender.send(message);
-        } catch (Exception exception) {
-            log.error(exception.getMessage(), exception);
+        } catch (Exception e) {
+            log.error("Failed to send email: {}", e.getMessage(), e);
             throw new ApiException("Unable to send email");
         }
     }
+
 
     private MimeMessage getMimeMessage() {
         return emailSender.createMimeMessage();

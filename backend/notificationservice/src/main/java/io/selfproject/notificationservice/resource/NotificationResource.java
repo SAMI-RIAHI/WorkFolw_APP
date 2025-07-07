@@ -23,14 +23,6 @@ import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.ResponseEntity.created;
 import static org.springframework.http.ResponseEntity.ok;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 2/2/25
- */
-
 @RestController
 @AllArgsConstructor
 @RequestMapping("/notification")

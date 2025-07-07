@@ -11,14 +11,6 @@ import java.io.IOException;
 
 import static io.selfproject.notificationservice.utils.RequestUtils.handleErrorResponse;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 1/22/25
- */
-
 @Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 

@@ -7,14 +7,6 @@ import org.springframework.stereotype.Component;
 
 import static org.springframework.security.core.authority.AuthorityUtils.commaSeparatedStringToAuthorityList;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 1/28/25
- */
-
 @Component
 public class JwtConverter implements Converter<Jwt, JwtAuthenticationToken> {
     private static final String AUTHORITY_KEY = "authorities";

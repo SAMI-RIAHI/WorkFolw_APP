@@ -34,12 +34,6 @@ import static io.selfproject.notificationservice.utils.RequestUtils.handleErrorR
 import static org.apache.commons.lang3.exception.ExceptionUtils.getRootCauseMessage;
 import static org.springframework.http.HttpStatus.*;
 
-/**
- * @author Roland Junior Toussaint
- * @version 1.0
- * @since 2/25/2025
- */
-
 @RestControllerAdvice
 @RequiredArgsConstructor
 @Slf4j

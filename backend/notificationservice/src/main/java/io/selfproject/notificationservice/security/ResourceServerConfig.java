@@ -22,14 +22,6 @@ import static org.springframework.http.HttpHeaders.*;
 import static org.springframework.http.HttpMethod.*;
 
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (<a href="https://www.getarrays.io">Get Arrays, LLC</a>)
- * @email getarrayz@gmail.com
- * @since 1/20/25
- */
-
 @Slf4j
 @Configuration
 @EnableWebSecurity
