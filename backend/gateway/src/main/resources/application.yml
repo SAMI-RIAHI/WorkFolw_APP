@@ -37,7 +37,7 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true   # Utiliser l'adresse IP au lieu du nom
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://${USER_NAME}:${PASSWORD}@localhost:5002/eureka/

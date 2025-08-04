@@ -12,7 +12,7 @@
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gateway</name>
-	<description>Micro Service gateway ...</description>
+	<description>Micro Service gateway</description>
 	<url/>
 	<licenses>
 		<license/>

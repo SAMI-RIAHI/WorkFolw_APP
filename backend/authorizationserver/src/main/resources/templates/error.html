@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" class="bg-gray-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Cat Support | Please sign in</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9732/9732800.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<nav class="bg-white shadow-sm border-b border-gray-200 fixed w-full top-0 left-0 z-40">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-8">
+                <div onclick="window.location.href='http://localhost:3000/'" class="logo-container flex items-center cursor-pointer h-16 overflow-hidden">
+                    <img src="https://i.postimg.cc/Bb6CmC6S/it-flow-logo.png" alt="IT-Flow Logo"
+                         class="h-18 w-60 object-contain"
+                    />
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Projects</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Issues</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Dashboard</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Reports</a>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="http://localhost:8080/oauth2/authorize?response_type=code&client_id=client&scope=openid&redirect_uri=http://localhost:3000&code_challenge_method=S256&code_challenge=zKd0nm7RBefb286YWucAts1i8-DWNvXBFz3MXBtrMQE"
+                   class="text-gray-600 hover:text-blue-600 font-medium transition-colors inline-flex items-center">
+                    Login
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+
+                <a href="http://localhost:3000/register"
+                   class="text-gray-600 hover:text-blue-600 font-medium transition-colors hidden sm:inline-flex items-center">
+                    Register
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+
+                <a href="http://localhost:3000/resetpassword"
+                   class="text-gray-600 hover:text-blue-600 font-medium transition-colors hidden lg:inline-flex items-center">
+                    Reset Password
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 4.5 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="mt-12">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-sm text-center">
+            <h1 class="mb-4 text-3xl font-bold text-gray-800 tracking-tight" th:text="${message}">500 - Internal Server Error</h1>
+            <div class="mb-8 p-6 mx-auto max-w-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-3 text-left">
+                        <div class="ml-3 text-left">
+                            <h3 class="text-sm font-semibold text-blue-900 mb-1">What happened?</h3>
+                            <p class="text-sm text-blue-800" th:text="${message}">
+                                Something went wrong, We're experiencing some technical difficulties. Our team has been notified and is working to resolve this quickly.
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="http://localhost:8080/oauth2/authorize?response_type=code&client_id=client&scope=openid&redirect_uri=http://localhost:3000&code_challenge_method=S256&code_challenge=zKd0nm7RBefb286YWucAts1i8-DWNvXBFz3MXBtrMQE"
+                   class="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                    </svg>
+                    Back to Login
+                </a>
+
+                <button onclick="window.location.reload()"
+                        class="inline-flex items-center px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:ring-gray-300 rounded-lg transition-all duration-200 border border-gray-300">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

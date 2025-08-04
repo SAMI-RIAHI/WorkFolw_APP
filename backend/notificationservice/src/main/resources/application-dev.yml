@@ -13,8 +13,8 @@ SERVER_PORT: 8088
 
 EMAIL_HOST: smtp.gmail.com
 EMAIL_PORT: 587
-EMAIL_ID: quincyaus@gmail.com
-EMAIL_PASSWORD: zoduwfetslnxywhi
+EMAIL_ID: rsami.riahi@gmail.com
+EMAIL_PASSWORD: jzbcclkqypjiqcwo
 VERIFY_EMAIL_HOST: http://localhost:3000
 
 UI_APP_URL: http://localhost:3000

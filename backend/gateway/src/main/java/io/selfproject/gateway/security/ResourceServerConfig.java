@@ -34,7 +34,7 @@ public class ResourceServerConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .cors(cors -> cors.configurationSource(null))
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/user/register/**", "/user/verify/account/**", "/user/resetpassword/**","/user/image/**","/authorization/**").permitAll()
                         .anyRequest().authenticated())

@@ -1,4 +1,4 @@
-package io.selfproject.userservice.domain;
+package io.selfproject.authorizationserver.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.http.HttpStatus;

@@ -25,7 +25,6 @@ spring:
         default_schema: ${POSTGRES_DATABASE}
         #dialect: org.hibernate.dialect.PosgreSQLInnoDBDialect
         format_sql: true
-
   kafka:
     bootstrap-servers:
       - ${KAFKA_SERVER_URL}
@@ -39,7 +38,7 @@ spring:
         spring:
           json:
             type:
-              mapping: Notification:io.selfprojet.notificationservice.domain.Notification
+              mapping: Notification:io.getarrays.notificationservice.domain.Notification
 
   thymeleaf:
     suffix: .html
