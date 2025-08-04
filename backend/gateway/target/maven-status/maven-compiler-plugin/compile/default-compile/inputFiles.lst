@@ -1,9 +1,0 @@
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\Application.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\domain\Response.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\exception\ApiException.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\handler\GatewayAccessDeniedHandler.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\handler\GatewayAuthenticationEntryPoint.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\security\JwtConverter.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\security\PasswordEncoderConfig.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\security\ResourceServerConfig.java
-C:\sami riahi\GitHub\Projets\SelfProject\WorkFlow_APP\backend\gateway\src\main\java\io\selfproject\gateway\utils\RequestUtils.java

@@ -1,9 +1,0 @@
-io\selfproject\gateway\utils\RequestUtils.class
-io\selfproject\gateway\security\JwtConverter.class
-io\selfproject\gateway\Application.class
-io\selfproject\gateway\handler\GatewayAuthenticationEntryPoint.class
-io\selfproject\gateway\security\ResourceServerConfig.class
-io\selfproject\gateway\security\PasswordEncoderConfig.class
-io\selfproject\gateway\domain\Response.class
-io\selfproject\gateway\handler\GatewayAccessDeniedHandler.class
-io\selfproject\gateway\exception\ApiException.class
